@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import apiClient from "../services/api-client";
+import axios from "axios";
 import { Text } from "@chakra-ui/react";
 
-interface Game {
+export interface Game {
   id: number;
   name: string;
+  background_image: string;
 }
 
 interface FetchGamesResponse {
@@ -22,7 +24,8 @@ const useGames = () => {
       .get<FetchGamesResponse>("/games", { signal: controller.signal })
       .then((res) => setGames(res.data.results))
       .catch((err) => {
-        if (err instanceof CanceledError) return;
+        // if (err instanceof CanceledError) return;
+        if (axios.isCancel(err)) return;
         setError(err.message);
       });
 
