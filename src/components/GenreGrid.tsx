@@ -5,7 +5,7 @@ import GenreCardContainer from "./GenreCardContainer";
 import GenreCardSkeleton from "./GenreCardSkeleton";
 
 const GenreGrid = () => {
-  const { genres, error, isLoading } = useGenres();
+  const { data, error, isLoading } = useGenres();
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
@@ -17,7 +17,7 @@ const GenreGrid = () => {
               <GenreCardSkeleton />
             </GenreCardContainer>
           ))}
-        {genres.map((genre) => (
+        {data.map((genre) => (
           <GenreCardContainer>
             <GenreCard key={genre.id} genre={genre} />
           </GenreCardContainer>
