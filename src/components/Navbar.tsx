@@ -3,7 +3,7 @@ import logo from "../assets/logo.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <HStack padding="10px">
       <Image src={logo} boxSize={"60px"} />
@@ -13,4 +13,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
