@@ -3,12 +3,6 @@ import ms from 'ms';
 import platformService from "../services/platformService";
 import platforms from "../data/platforms";
 
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
-
 const usePlatforms = () => 
 useQuery({
   queryKey:['platforms'],
