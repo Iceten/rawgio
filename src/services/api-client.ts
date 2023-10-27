@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from "axios";
+import axios, { AxiosRequestConfig,InternalAxiosRequestConfig } from "axios";
 
 export interface FetchResponse<T> {
     count: number;
