@@ -21,6 +21,9 @@ const GameScreenShots = ({ gameId }: Props) => {
         ))}
       </SimpleGrid>
     );
+  else {
+    return null;
+  }
 };
 
 export default GameScreenShots;
